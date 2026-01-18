@@ -215,7 +215,6 @@ main {
 footer {
     /* Gradiente escuro para o texto ficar legível + Imagem da Justiça */
     background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(33, 33, 197, 0.8)), url('../imagens/fundo-rodape.png');
-    
     background-size: cover;
     background-position: center;
     color: white;
