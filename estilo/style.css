@@ -188,9 +188,14 @@ main {
     background: white;
     padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra suave */
-    border-left: 5px solid var(--cor2); /* Detalhe lateral elegante */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-left: 5px solid var(--cor2);
     transition: 0.3s;
+    
+    /* AS MUDANÇAS COMEÇAM AQUI: */
+    display: flex;            /* 1. Transforma o card em Flexbox */
+    flex-direction: column;   /* 2. Organiza os itens um embaixo do outro */
+    height: 100%;             /* 3. Força o card a ocupar toda a altura da linha do Grid */
 }
 
 .card-servico:hover {
@@ -203,12 +208,27 @@ main {
     margin-bottom: 10px;
 }
 
+/* Estilo do Link "Saiba Mais" nos Cards */
 .link-card {
-    display: block;
-    margin-top: 15px;
+    /* Mantenha o estilo visual que já fizemos (cor, borda, etc)... */
+    display: inline-block;
     color: var(--cor2);
     text-decoration: none;
     font-weight: bold;
+    border: 2px solid var(--cor2);
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    
+    /* A MÁGICA DO ALINHAMENTO: */
+    margin-top: auto;       /* 4. Empurra o botão para o final do card */
+    align-self: flex-start; /* 5. Garante que o botão fique na esquerda (sem esticar) */
+}
+
+.link-card:hover {
+    background-color: var(--cor2);
+    color: white;
+    transform: translateX(5px);
 }
 
 /* --- RODAPÉ --- */
