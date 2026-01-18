@@ -31,9 +31,14 @@
 }
 
 body {
-    background-color: var(--cor-fundo);
+    /* Imagem de fundo sutil repetindo suavemente */
+    background-image: url('../imagens/fundo-site.png');
+    background-color: #f4f4f9; /* Cor de segurança */
+    background-size: cover; /* Cobre a tela toda */
+    background-attachment: fixed; /* O fundo não se mexe, só o conteúdo */
+    
     font-family: var(--fonte-padrao);
-    line-height: 1.6; /* Melhora a leitura */
+    line-height: 1.6;
 }
 
 /* --- HEADER PROFISSIONAL (Flexbox) --- */
@@ -99,11 +104,17 @@ nav.topo a:hover {
 
 /* --- DESTAQUE (HERO) --- */
 .destaqueinicial {
-    background-color: var(--cor3);
+    /* Gradiente Azul Escuro (85% opacidade) + Imagem dos Livros */
+    background-image: linear-gradient(rgba(33, 33, 197, 0.85), rgba(46, 46, 70, 0.9)), url('../imagens/fundo-hero.png');
+    
+    /* Configuração para a imagem cobrir tudo e ficar fixa (Efeito Parallax) */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* A imagem fica parada enquanto o texto sobe */
+    
     color: white;
     text-align: center;
-    padding: 60px 20px;
-    /* Dica: Aqui você pode colocar uma imagem de fundo depois usando background-image */
+    padding: 100px 20px; /* Mais espaço para ficar imponente */
 }
 
 .destaqueinicial h1 {
@@ -202,10 +213,14 @@ main {
 
 /* --- RODAPÉ --- */
 footer {
-    background-color: var(--cor4);
+    /* Gradiente escuro para o texto ficar legível + Imagem da Justiça */
+    background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(33, 33, 197, 0.8)), url('../imagens/fundo-rodape.png');
+    
+    background-size: cover;
+    background-position: center;
     color: white;
     text-align: center;
-    padding: 30px;
+    padding: 60px 20px;
     margin-top: 50px;
 }
 
